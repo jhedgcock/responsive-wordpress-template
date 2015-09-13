@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ----------- GENERAL -------------*/
+@-ms-viewport {width: device-width;}
+@viewport {width: device-width;}
+	
+body {
+		font: 400 1.15em/2em 'News Cycle', 'Helvetica', sans-serif;/*no commas in some of the parameters*/ 
+		background-image: url('images/grid.png');
+}
+	
+a, a:visited {
+	text-decoration: none;
+	color: black;
+	}
+
+
+
+/* ----------- BANNER STYLES -------------*/
+section#banner {
+background-image: url(images/header-bg.jpg);
+background-position: bottom right;
+background-repeat:no-repeat;
+}
+
+section#banner header {
+	height: 10.5em; /*200px*/
+	font-family: "News Cycle";
+}
+
+section#banner header h1 {
+	font-family:  "Oleo Script", sans-serif;
+	color: #f5f5f5;/*light white-grey*/
+	font-size: 1.75em;
+	line-height: 1.75em;
+	text-align: center;
+	padding: 55px 10px ;
+	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+section#banner nav#globalnav {
+	background: #6a92ad;
+	border-top: 2px solid #c3d7e0;
+	}
+
+section#banner nav#globalnav ul li {
+	height: 2.55em;
+	line-height: 2.55em;	
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+section#banner nav#globalnav ul li a, section#banner nav#globalnav ul li a:visited {
+	display: block;
+	width: 86%; /*this # due to padding below*/
+	height: 100%;
+	padding: 0 7%; /*L and R are 7%*/
+	
+}
+
+section#banner nav#globalnav ul li a:hover {
+	background: #c3d7e0;
+	color: #d65e32;
+}
+
+
+/*--------GENERAL SECTION RULES---------*/
+section article {
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.5em;
+	box-sizing: border-box;
+	background: #EDEFF0;
+	margin: 20px auto;
+	border-radius: 6px;
+	box-shadow: 0 3px 10px grey;
+}
+
+section article header {
+	padding: 1em 0;
+}
+
+section article header h1 {
+	font-size: 1.85em;
+	text-transform: uppercase;
+	font-weight: 700;
+	
+}	
+
+section article header h2 {
+	font-size: 1.1em;	
+	/*padding-left: 2%;*/
+	font-style: italic;
+	color: #d65e32;
+}
+section article header h1, section article header h2 {
+	text-align: center;
+	}
+section article pre {
+		white-space: pre-wrap; 
+		color: black;
+}
+
+
+/*--------------Section other elements--------------*/
+section article p, section article ul, section article ol, section article dl, section article aside, section article blockquote {
+	margin-bottom: 1.5em;	
+}
+
+section article aside {
+	margin: 3%;
+	padding: 1.5em;
+	border: 2px dotted #67727a;
+	background: #c3d7e0;
+}
+
+section article ul {
+	list-style-type: circle;
+	margin-left: 7%;
+}
+
+section article ol {
+	list-style-type: decimal;
+	margin-left: 7%;
+}
+
+section article dl {
+	font-weight: 300;
+}
+
+section article dl dt {
+	font-weight: 400;
+	font-style: italic;	
+}
+
+section article dd{
+	margin-left: 1.5em;	
+}
+
+section article blockquote {
+	margin: 2em;
+	font-style: italic;
+}
+
+section article pre {
+	color: #d65e32;
+}
+
+/*--------FOOTER RULES---------*/
+footer {
+	background: #6a92ad;
+	margin-top: 2em;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	border-top: 2px solid #f5f5f5;
+}
+
+footer article {
+	min-width: 33.3%;
+	/*padding: 1em 10%;*/
+	box-sizing: border-box;
+	margin: 20px auto;
+		
+}
+ 
+footer article header h1 {
+	font-size: 1.55em;	
+	text-transform: uppercase;
+	padding: .5em;
+	text-align: center;
+	font-weight: bold;
+	 
+}
+
+footer article ul li {
+	background:#c3d7e0; 
+	border-bottom: 1px solid #67727A;
+	padding: .5em;
+}
+
+footer article ul li a {
+	display: block;	/*allows text to chg when hover over any area of li*/
+	text-align: center;
+}
+footer article ul li:hover {
+		background: #67727A;
+		}
+		
+footer article ul li a:hover {
+	color: #d65e32;
+}
+
+/*--------MEDIA QUERIES---------*/
+
+@media screen and (min-width: 768px) {
+	
+/*--------HEADER/BANNER RULES---------*/
+
+section#banner header h1 {
+	font-size: 2em;
+	line-height: 2em;
+	padding: 60px 10px ;
+}
+
+section#banner {
+background-position: top right;
+}
+
+/*--------NAV RULES---------*/
+	section#banner nav#globalnav ul{
+			overflow: hidden;	/*use w floats to prevent collapse of parent element*/
+			height: 2.5em;
+	}
+	section#banner nav#globalnav ul li {
+			float: left;
+			width: 25%;
+			text-align: center;
+		}
+		section#banner nav#globalnav ul li a, section#banner nav#globalnav ul li a:visited {
+			/*border-bottom: .25em solid #000;	*/ /*annoying bottom border i couldn't find */
+		}
+		
+		section#banner nav#globalnav ul li a:hover {
+			border-bottom: .25em solid #2F98AD;
+		}
+/*--------ARTICLE RULES---------*/
+		section article aside {
+			padding: 1.5em;
+			border: 1 px dotted white;
+		}
+		
+		section article aside {
+			float: right;
+			margin-left: 5%;
+			
+		}
+		
+		section article header {
+		max-width:  80%;
+		padding: 2em 0;
+		background: #6a92ad;
+		border-radius: 6px 6px 0 0;
+		box-shadow: 0 3px 10px grey;
+		margin: 0 auto 1.75em;
+	
+		} 
+	
+		section article header h1 {
+			color: #F8F5F5;
+			}
+			
+		section article header h2 {
+			color: #050505;
+			
+			}
+/*--------FOOTER RULES---------*/
+		footer article {
+			float: left;
+		}
+			
+		footer article ul li {
+			background:  #6a92ad;
+			border:none;
+			padding: 0;	
+		}
+		
+		footer article ul li:hover {
+			background: none;
+		}
+}
