@@ -15,13 +15,16 @@ a, a:visited {
 	color: black;
 	}
 
-
+#contain {
+	max-width: 1200px;
+	margin: 0 auto;
+	}
 
 /* ----------- BANNER STYLES -------------*/
 section#banner {
-background-image: url(images/header-bg.jpg);
-background-position: bottom right;
-background-repeat:no-repeat;
+background: #d65e32;/*fallback bg*/
+background: #d65e32 url("images/cubes.png");
+background-repeat:repeat;
 }
 
 section#banner header {
@@ -63,16 +66,22 @@ section#banner nav#globalnav ul li a:hover {
 	background: #c3d7e0;
 	color: #d65e32;
 }
-
+section#banner nav#globalnav {
+	box-shadow: 0 3px 5px grey;
+	}
 
 /*--------GENERAL SECTION RULES---------*/
+
+section#contain {
+	max-width: 1200px;
+	}
+	
 section article {
-	width: 90%;
-	margin: 0 auto;
+	width: 94%;
 	padding: 1.5em;
 	box-sizing: border-box;
 	background: #EDEFF0;
-	margin: 20px auto;
+	margin: 14px auto;
 	border-radius: 6px;
 	box-shadow: 0 3px 10px grey;
 }
@@ -154,7 +163,9 @@ footer {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
-	border-top: 2px solid #f5f5f5;
+	box-shadow: 0 3px 5px grey;
+	box-shadow: 0 -3px 5px grey;
+	
 }
 
 footer article {
@@ -209,6 +220,10 @@ background-position: top right;
 }
 
 /*--------NAV RULES---------*/
+	section#banner nav#globalnav ul {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 	section#banner nav#globalnav ul{
 			overflow: hidden;	/*use w floats to prevent collapse of parent element*/
 			height: 2.5em;
@@ -226,6 +241,10 @@ background-position: top right;
 			border-bottom: .25em solid #2F98AD;
 		}
 /*--------ARTICLE RULES---------*/
+		section#contain {
+			max-width: 1200px;
+			margin: 0 auto;
+			}
 		section article aside {
 			padding: 1.5em;
 			border: 1 px dotted white;
@@ -240,21 +259,10 @@ background-position: top right;
 		section article header {
 		max-width:  80%;
 		padding: 2em 0;
-		background: #6a92ad;
-		border-radius: 6px 6px 0 0;
-		box-shadow: 0 3px 10px grey;
 		margin: 0 auto 1.75em;
 	
 		} 
 	
-		section article header h1 {
-			color: #F8F5F5;
-			}
-			
-		section article header h2 {
-			color: #050505;
-			
-			}
 /*--------FOOTER RULES---------*/
 		footer article {
 			float: left;

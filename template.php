@@ -30,7 +30,7 @@
         </nav>
     </section>
     <!-- /////////// Section ONE ////////////////////////////// -->
-    <section>
+    <section id="contain">
         <article>
             <header>
                 <h1>H1 Heading</h1>
@@ -52,7 +52,7 @@
     <!--End section ONE-->
     
     <!-- /////////// Section TWO ////////////////////////////// -->
-    <section>
+    <section id="contain">
         <article>
             <header>
                 <h1>H1 Heading</h1>
@@ -73,7 +73,7 @@
       <!--End section TWO-->
       
       <!-- /////////// Section THREE ////////////////////////////// -->
-    <section>
+    <section id="contain">
         <article>
               <header>
                 <h1>H1 Heading</h1>
@@ -97,6 +97,7 @@
     </section>
       <!--End section THREE-->
       <footer>
+      	<div id="contain">
         <article>
              <header><h1>Footer 1</h1></header>
              <ul>
@@ -122,6 +123,7 @@
                 <li><a href="#">UL External link 2</a></li>
                 <li><a href="#">UL External link 3</a></li>
             </ul>
+            </div><!--#contain close-->
         </article>
       </footer>
 </body>
